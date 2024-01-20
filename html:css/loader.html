@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        #loader-toggle {
+            display: none;
+        }
+        
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 3s linear; /* Change the duration to 3s */
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        #content {
+            /* Your regular content styles */
+            opacity: 0; /* Initially set opacity to 0 */
+            transition: opacity 1s ease-in-out; /* Add a smooth transition effect */
+        }
+        
+        #loader-toggle:checked + .loader-wrapper {
+            display: none; /* Hide loader when checkbox is checked */
+        }
+        
+        #loader-toggle:checked + .overlay + #content {
+            opacity: 1; /* When checkbox is checked, set opacity to 1 */
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 9998;
+            display: none;
+        }
+        
+        #loader-toggle:checked + .overlay {
+            display: block; /* Display overlay when checkbox is checked */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="loader-toggle">
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Your website content goes here -->
+    <div id="content">
+        <h1>Welcome to Your Website</h1>
+        <p>This is your website content.</p>
+    </div>
+
+    <label for="loader-toggle" class="overlay"></label>
+</body>
+</html>

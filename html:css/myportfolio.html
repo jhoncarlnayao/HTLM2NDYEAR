@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="icon" type="image/png" href="xing.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-family: 'Press Start 2P',cursive;">My Portfolio</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
+        body{
+            line-height: 1.5em;
+            width: 50pc;
+            height: 350vh;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            background: rgb(23, 22, 31);
+            /*background-image: url(bgblack.jpg);  */  
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:contain;
+            scroll-behavior: smooth;
+            background-attachment: fixed;
+
+
+            
+        }
+        .anime{
+            position: relative;
+            bottom: 11pc;
+            height: 75px;
+            left: 18pc;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h1{
+            position: fixed;
+            top: -8pc;
+            font-family:"Press Start 2P",cursive;
+            color: white;
+            font-size: 2pc;
+            /*letter-spacing: 10px;*/
+            padding: 0px 0px 0px 50px;
+            transition: transform 0.3s ease-in-out,color 0.3s ease-in-out;
+            font-weight: 700;  
+            border-radius: 10pc; 
+            left: 72px;
+            padding: 10px;
+            
+            
+        }
+        
+        .myname{
+            color:blue
+        }
+
+        h1:hover{
+            background-color: #ffc107;
+            color: #ffc107;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            background-size: -10px;
+            border-width: 2px;
+            transform: scale(1.09);
+            z-index: 2;
+        }
+
+
+
+        h2{
+            position: fixed;
+            font-family:"Press Start 2P",cursive;
+            color: white;
+            font-size: 18px;
+            top: -9.5pc;
+            left: 50px;
+            padding: 0px 0px 0px 60px;
+            transition: color 0.3s ease,transform  0.3s ease-in-out; 
+        }
+
+        h2:hover,
+        summary:hover {
+            color: #ffc107 !important;
+            transform: scale(1.1) !important;
+            transition: color 0.3s ease, transform 0.3s ease-in-out;
+        }
+        
+        h3{
+            display: inline-block;
+            position: relative;
+            left: 6em;
+            top: 30em;
+            font-family: "Press Start 2P",cursive;
+            font-size: 1em;
+            color: white;
+            font-weight: bolder;
+        }
+
+        h3::after{
+            content: '';
+            position: absolute;
+            top: 12px;
+            left:9.2em;
+            height: 1px;
+            width: 190px; 
+            background-color: white;
+            transform: translateY(-50%);
+        }
+
+        h4{
+            display: inline-block;
+            position: relative;
+            left: 6em;
+            top: 7em;
+            font-family: "Press Start 2P",cursive;
+            font-size: 1em;
+            color: white;
+            font-weight: bolder;
+        }
+
+        h4::after{
+            content: '';
+            position: absolute;
+            top: 12px;
+            left:9.2em;
+            height: 1px;
+            width: 190px; 
+            background-color: white;
+            transform: translateY(-50%);
+        }
+        
+        #myaboutme{
+            position: relative;
+            color: white;
+            font-size: 5px;
+            top: -10em;
+
+        }
+
+
+
+        #myskills{
+            position: relative;
+            top: 40em;
+            font-size: 10px;
+        
+        }
+        
+   
+
+        
+
+        
+        .lower{
+            position: fixed;
+            top: -3.3pc;
+            left:3pc;
+            font-size: 10px;
+            font-family:"Press Start 2P",cursive;
+            line-height: 17px;
+            /*margin: 20px;    MARGIN DECORATION */
+            color: white;
+            width: 100%;
+            overflow: hidden;
+            animation: 
+            typing 3s steps(100),
+            cursor .4s step-end infinite alternate;
+            transition: color 0.3s ease;
+        }
+        .lower:hover{
+            color:#ffc107;
+        }
+        
+        @keyframes typing {
+            from{ width: 0;}
+            
+        }
+        
+
+     
+        .largetext{
+
+            font-family:"Press Start 2P",cursive;
+            font-weight: bolder;
+            transition: transform 0.3s ease-in-out;
+
+        }
+        
+        .largetext:hover {
+            transform: scale(1.3);
+        }
+
+        .univlink{
+            text-decoration: none;
+            color:white;
+            
+            
+        }
+
+        #imagecontainer{
+            position: relative;
+            bottom: -5em;
+            left:60em;
+            width: 300px;
+            height: 300px;
+            border-radius: 70%;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        #imagecontainer img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #imagecontainer:hover{
+            transform: scale(1.2);
+        }
+
+        .animate__animated{
+            animation-duration: 2s;
+        }
+        .navigationbar{
+            position: fixed;
+            width: 115em;
+            height: 50px;
+            background-color:rgba(56, 52, 187, 0.328);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            font-family: "Press Start 2P",cursive;
+            font-size: 80%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(56, 52, 187, 0.328);
+            box-shadow: 0px 4px 6px rgba(0 ,0 ,0 ,0.1);
+            z-index: 2;
+        
+        }
+
+        ul{
+            display: flex;
+            width: 500px;
+            padding: 0;
+        }
+        
+        li{
+            
+            list-style: none;
+            width: 200px;
+            height: 25px;
+        }
+        li a {
+            
+            text-decoration: none;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            transition: color 0.4s ease-in-out;
+            border-radius: 50px;
+            position: relative;
+            
+            
+        }
+        li a:hover{
+            color: #ffc107;
+        }
+        li a::before{
+            content: "";
+            position: absolute;
+            background-color: #ffc107;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -3px;
+            transition: 0.3s;
+        } 
+        li a:hover::before{
+            width: 100%;
+        }
+        .home{
+            font-weight: 500;
+            padding-right: 700px;
+            padding-left: 30px;
+        }
+        .about{
+            font-weight: bolder;
+            padding-right: 90px;
+        }
+        .socials{
+            font-weight: bolder;
+            padding-right: 85px;
+        }
+        .aboutme{
+            font-weight: bolder;
+            padding-right: 85px;
+        }
+        .skills{
+            font-weight: bolder;
+            padding-right: 85px;
+        }
+        
+        details{
+            font-family: "Press Start 2P",cursive;
+            color: white;
+            position: relative;
+            bottom: 4.4pc;
+            left: 5pc;
+            font-size: 10px;
+            transition: transform 0.3s ease-in-out,color 0.3s ease-in-out;
+            border-radius: 70px;
+            padding: 10px;
+        }
+        details:hover{
+            transform: scale(1.05);
+            color: #ffc107;
+
+           
+        }
+
+        details:hover{
+            transform: translateY(1.3);
+        }
+
+        footer {
+            position: relative;
+            top: 130rem;
+            width: 183em;
+            height: 30px;
+            color: white;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 50%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(56, 52, 187, 0.47);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.194);
+            z-index: 2;
+            transition: color 0.3s ease,transform 0.2s ease;
+        }
+        .infofooter{
+            font-family: "Press Start 2P",cursive;
+            font-size: 1em;
+        }
+        .email{
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s ease;
+        }
+        footer:hover,.email:hover{
+            color: #ffc107;
+        }
+
+        
+        /* CARD */
+   
+        .card {
+            height: 300px;
+            width: 400px;
+            position: relative;
+            top: 34em;
+            left: 6em;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            border-radius: 20px;
+            box-shadow: 0 0 20px 8px #3c3e4a;
+            overflow: hidden;
+            -webkit-backdrop-filter: blur(50px);
+             backdrop-filter: blur(50px);
+          }
+          
+         
+          .card-image {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            background: #0a3394;
+            background: linear-gradient(to top, #0a3394, #4286f4);
+
+            background-image: url('python-alt.png');
+            background-size: cover; 
+            background-position:center; 
+            
+          }
+          
+        
+          .card-description {
+            display: flex;
+            position: absolute;
+            gap: .5em;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            color: #212121;
+            height: 70%;
+            bottom: 0;
+            border-radius: 16px;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 1rem;
+          }
+          
+   
+          .text-title {
+            position: relative;
+            top: -2em;
+            font-family: "Press Start 2P",cursive;
+            font-weight: bolder;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          
+          .text-body {
+            position: relative;
+            top: -5em;
+            font-family: "Press Start 2P",cursive;
+            font-size: 10px;
+            line-height: 1.8;
+            
+          }
+          
+         
+          .card:hover .card-description {
+            transform: translateY(100%);
+          }
+
+          .logocard1{
+            position: relative;
+            top: 10px;
+          }
+
+          /* CARD 2*/
+          .card2 {
+            height: 300px;
+            width: 400px;
+            position: relative;
+            top: 15.3em;
+            left: 35em;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            border-radius: 20px;
+            box-shadow: 0 0 20px 8px #3c3e4a;
+            overflow: hidden;
+            -webkit-backdrop-filter: blur(50px);
+             backdrop-filter: blur(50px);
+          }
+          
+         
+          .card-image2 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            background: #0a3394;
+            background: linear-gradient(to top, #0a3394, #4286f4);
+
+            background-image: url('python-alt.png');
+            background-size: cover; 
+            background-position:center; 
+            
+          }
+          
+        
+          .card-description2 {
+            display: flex;
+            position: absolute;
+            gap: .5em;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            color: #212121;
+            height: 70%;
+            bottom: 0;
+            border-radius: 16px;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 1rem;
+          }
+          
+   
+          .text-title2 {
+            position: relative;
+            top: -2em;
+            font-family: "Press Start 2P",cursive;
+            font-weight: bolder;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          
+          .text-body2 {
+            position: relative;
+            top: -5em;
+            font-family: "Press Start 2P",cursive;
+            font-size: 10px;
+            line-height: 1.8;
+            
+          }
+          
+         
+          .card2:hover .card-description2 {
+            transform: translateY(100%);
+          }
+
+          .logocard2{
+            position: relative;
+            top: 10px;
+          }
+
+          /* CARD 3*/
+          .card3 {
+            height: 300px;
+            width: 400px;
+            position: relative;
+            top: -3.3em;
+            left: 65em;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            border-radius: 20px;
+            box-shadow: 0 0 20px 8px #3c3e4a;
+            overflow: hidden;
+            -webkit-backdrop-filter: blur(50px);
+             backdrop-filter: blur(50px);
+          }
+          
+         
+          .card-image3 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            background: #0a3394;
+            background: linear-gradient(to top, #0a3394, #4286f4);
+
+            background-image: url('python-alt.png');
+            background-size: cover; 
+            background-position:center; 
+            
+          }
+          
+        
+          .card-description3 {
+            display: flex;
+            position: absolute;
+            gap: .5em;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            color: #212121;
+            height: 70%;
+            bottom: 0;
+            border-radius: 16px;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 1rem;
+          }
+          
+   
+          .text-title3 {
+            position: relative;
+            top: -2em;
+            font-family: "Press Start 2P",cursive;
+            font-weight: bolder;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          
+          .text-body3 {
+            position: relative;
+            top: -5em;
+            font-family: "Press Start 2P",cursive;
+            font-size: 10px;
+            line-height: 1.8;
+            
+          }
+          
+         
+          .card3:hover .card-description3 {
+            transform: translateY(100%);
+          }
+
+          .logocard3{
+            position: relative;
+            top: 10px;
+          }
+
+
+          /* CARD 4*/
+
+
+          .card4 {
+            height: 300px;
+            width: 400px;
+            position: relative;
+            top: 3em;
+            left: 6em;
+            transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            border-radius: 20px;
+            box-shadow: 0 0 20px 8px #3c3e4a;
+            overflow: hidden;
+            -webkit-backdrop-filter: blur(50px);
+             backdrop-filter: blur(50px);
+          }
+          
+         
+          .card-image4 {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            background: #0a3394;
+            background: linear-gradient(to top, #0a3394, #4286f4);
+
+            background-image: url('python-alt.png');
+            background-size: cover; 
+            background-position:center; 
+            
+          }
+          
+        
+          .card-description4 {
+            display: flex;
+            position: absolute;
+            gap: .5em;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            color: #212121;
+            height: 70%;
+            bottom: 0;
+            border-radius: 16px;
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            padding: 1rem;
+          }
+          
+   
+          .text-title4 {
+            position: relative;
+            top: -2em;
+            font-family: "Press Start 2P",cursive;
+            font-weight: bolder;
+            font-size: 1.3rem;
+            font-weight: 700;
+          }
+          
+          .text-body4 {
+            position: relative;
+            top: -5em;
+            font-family: "Press Start 2P",cursive;
+            font-size: 10px;
+            line-height: 1.8;
+            
+          }
+          
+         
+          .card4:hover .card-description4 {
+            transform: translateY(100%);
+          }
+
+          .logocard4{
+            position: relative;
+            top: 10px;
+          }
+
+            /* CARD 5*/
+
+
+            .card5 {
+                height: 300px;
+                width: 400px;
+                position: relative;
+                bottom: 15.8em;
+                left: 35em;
+                transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+                border-radius: 20px;
+                box-shadow: 0 0 20px 8px #3c3e4a;
+                overflow: hidden;
+                -webkit-backdrop-filter: blur(50px);
+                 backdrop-filter: blur(50px);
+              }
+              
+             
+              .card-image5 {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+                background: #0a3394;
+                background: linear-gradient(to top, #0a3394, #4286f4);
+    
+                background-image: url('python-alt.png');
+                background-size: cover; 
+                background-position:center; 
+                
+              }
+              
+            
+              .card-description5 {
+                display: flex;
+                position: absolute;
+                gap: .5em;
+                flex-direction: column;
+                background-color: #f5f5f5;
+                color: #212121;
+                height: 70%;
+                bottom: 0;
+                border-radius: 16px;
+                transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+                padding: 1rem;
+              }
+              
+       
+              .text-title5 {
+                position: relative;
+                top: -2em;
+                font-family: "Press Start 2P",cursive;
+                font-weight: bolder;
+                font-size: 1.3rem;
+                font-weight: 700;
+              }
+              
+              .text-body5 {
+                position: relative;
+                top: -5em;
+                font-family: "Press Start 2P",cursive;
+                font-size: 10px;
+                line-height: 1.8;
+                
+              }
+              
+             
+              .card5:hover .card-description5 {
+                transform: translateY(100%);
+              }
+    
+              .logocard5{
+                position: relative;
+                top: 10px;
+              }
+
+
+
+              
+          
+          
+          
+          
+        
+
+     
+        
+        
+
+
+
+
+        
+
+
+
+    </style>
+</head>
+
+<body > <!--  class="animate__animated animate__fadeInLeftBig" MAIN ANIMATION FOR ALL-->
+
+<header>
+<div class="navigationbar">
+    <ul>
+        <li class="home"><a href="#top">Home</a></li>
+        <li class="skills"><a href="#myskills">Skills</a></li>
+        <li class="aboutme"><a href="#myaboutme">Aboutme</a></li>
+        <li class="socials"><a href="#">Socials</a></li>
+        <li class="contact"><a href="#myfooter">Contact</a></li>
+    </ul>
+</div>
+</header>
+
+
+
+ <div id="imagecontainer">
+    <img src="myprof.jpeg" alt="melangto">
+ </div>
+
+
+
+
+    
+
+ <p id="top" style="position: relative; bottom: 25pc; font-size:0.1em;"></p>
+
+
+<div class="animate__animated animate__fadeInLeftBig">
+
+<h1 class="underline">I'm <span class="myname">Jhon Carl Nayao</span></h1>
+<h2>Hi,Everyone!</h2>
+
+<details>
+    <summary> I'm a second-year <span class="largetext" style="color: blue;">Bachelor of Science Information Technology</span> </summary>
+    <div class="typewriter">
+<pre class="lower">    
+    student at the <a class="univlink" href="https://web.facebook.com/uniminofficial" target="_blank"><b style="color: blue;">University of Mindanao</b></a> 
+    in Davao City.Currently, I'm deeply involved 
+    in self-study,honing my skills in Java, Python, HTML, CSS, 
+    and PHP, eager to apply my growing expertise 
+    in the dynamic field of information technology.</pre>
+</div>
+</details>
+
+
+<p id="myskills"></p>
+<h3> My Skills</h3>
+<div class="card">
+    <div class="card-image">
+    </div>
+      <div class="card-description">
+        <p class="text-title"> Python <img class="logocard1" src="icons8-python-50.png" alt="logopy"> </p>
+        <p class="text-body">I am proficient in Python since it is easy to navigate. I have several self-projects conducted using this language. One of them is an automatic clicker and tkinker GUI for Python and integrating Python with databases.</p>
+      </div>
+    </div>
+
+    <div class="card2">
+        <div class="card-image2">
+        </div>
+          <div class="card-description2">
+            <p class="text-title2"> Html <img class="logocard2" src="icons8-html-logo-50.png" alt="logohtml"> </p>
+            <p class="text-body2">I am proficient in Python since it is easy to navigate. I have several self-projects conducted using this language. One of them is an automatic clicker and tkinker GUI for Python and integrating Python with databases.</p>
+          </div>
+        </div>
+
+        <div class="card3">
+            <div class="card-image3">
+            </div>
+              <div class="card-description3">
+                <p class="text-title3"> Css <img class="logocard3" src="icons8-css-logo-50.png" alt="logocss"> </p>
+                <p class="text-body3">I am proficient in Python since it is easy to navigate. I have several self-projects conducted using this language. One of them is an automatic clicker and tkinker GUI for Python and integrating Python with databases.</p>
+              </div>
+            </div>
+
+
+
+            <div class="card4">
+                <div class="card-image4">
+                </div>
+                  <div class="card-description4">
+                    <p class="text-title4"> Java <img class="logocard4" src="icons8-java-logo-50.png" alt="logojava"> </p>
+                    <p class="text-body4">I am proficient in Python since it is easy to navigate. I have several self-projects conducted using this language. One of them is an automatic clicker and tkinker GUI for Python and integrating Python with databases.</p>
+                  </div>
+                </div>
+
+                <div class="card5">
+                    <div class="card-image5">
+                    </div>
+                      <div class="card-description5">
+                        <p class="text-title5"> Database <img class="logocard5" src="icons8-database-administrator-50.png" alt="logojava"> </p>
+                        <p class="text-body5">I am proficient in Python since it is easy to navigate. I have several self-projects conducted using this language. One of them is an automatic clicker and tkinker GUI for Python and integrating Python with databases.</p>
+                      </div>
+                    </div>
+
+
+   <h4>About me</h4>
+   <p id="myaboutme"></p>
+
+
+
+
+
+
+
+
+    
+
+
+
+<div class="myfooterhover">
+<footer id="myfooter">
+    <pre class="infofooter">
+         <a class="email" href="https://mail.google.com/mail/u/0/#inbox?compose=new">For Collaboration Email Me: Jhoncarlnayaoxx@gmail.com</a>                                    Contact Number: 09451544242
+    </pre>
+</div>
+    
+</footer>
+</body>
+</html>
